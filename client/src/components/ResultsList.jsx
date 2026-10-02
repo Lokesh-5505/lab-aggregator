@@ -17,11 +17,6 @@ export default function ResultsList({ results = [], query = '', pincode = '' }) 
             <strong>{pincode}</strong>
           </p>
         </div>
-
-        <div className="results-sort-indicator">
-          <span>Sorted by:</span>
-          <strong>True Lowest Final Price (Ascending)</strong>
-        </div>
       </div>
 
       <div className="cards-grid">
