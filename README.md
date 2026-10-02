@@ -407,27 +407,3 @@ const pipeline = [
 5. Click **Deploy**.
 6. When deployment finishes, copy your live Vercel URL (e.g. `https://lab-aggregator.vercel.app`).
 7. Update `CLIENT_ORIGIN` in Render's Environment Variables with your Vercel URL to secure CORS.
-
----
-
-## 10. Submission Deliverables & Links
-
-| Deliverable | Link / Status |
-|---|---|
-| **GitHub Repository** | `[Your GitHub Repository URL]` |
-| **Live Frontend (Vercel)** | `[Your Deployed Vercel URL]` |
-| **Live Backend API (Render)** | `[Your Deployed Render URL]` |
-| **Loom Video (max 3 mins)** | `[Your Loom Video URL]` |
-
-### Loom Video Recording Guide (3-Minute Script)
-- **0:00 – 1:15 (Live Demo):**
-  - Search `Lipid Profile` with pincode `110001`. Point out the true lowest price ranking: Local City Lab (₹450) is #1 because Apollo (₹800 + ₹100 = ₹900) includes a home collection fee.
-  - Highlight the "Single Test" vs "Package" badges, strikethrough MRP, and "NABL Certified" checkmark.
-  - Search `HbA1c` with pincode `110001` to show how packages containing the test appear.
-  - Search `MRI Brain` with pincode `110001` to show the clean empty state.
-  - Switch to responsive mobile mode (375px) to show the adaptive layout.
-- **1:15 – 2:15 (Code Walkthrough):**
-  - Open `server/src/controllers/searchController.js` and explain the aggregation pipeline (`$match` with regex escaping across `item_name` and `included_tests`, `$addFields` calculating `total_final_price`, and `$sort`).
-  - Open `client/src/components/ResultCard.jsx` and show the fee breakdown logic.
-- **2:15 – 2:50 (Why MERN?):**
-  - Discuss unified JavaScript across the stack, MongoDB's document model matching the nested pricing/logistics schema, and high-performance pipeline queries.
