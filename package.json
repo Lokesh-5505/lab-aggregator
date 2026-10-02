@@ -4,10 +4,17 @@
   "private": true,
   "description": "Full-stack MERN Lab Aggregator with true price ranking",
   "scripts": {
+    "start": "node server/src/index.js",
+    "build": "npm --prefix server install",
+    "postinstall": "npm --prefix server install",
     "dev": "node scripts/dev.js",
-    "server": "npm.cmd --prefix server run dev",
-    "client": "npm.cmd --prefix client run dev",
-    "seed": "npm.cmd --prefix server run seed",
-    "test": "npm.cmd --prefix server test"
+    "seed": "node server/seed/seed.js",
+    "test": "node server/test-runner.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.5"
   }
 }
